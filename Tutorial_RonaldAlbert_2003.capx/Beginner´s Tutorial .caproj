@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Beginner´s Tutorial </name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>lkayhow81oig</unique-id>
+    <saved-with-version>21600</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>854</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">Internet Explorer</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="Background" sid="8343510420560141">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\ronald.junior\Downloads\bg.png" />
+        </object-type>
+        <object-type name="Keyboard" sid="9923783814685452">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Mouse" sid="9448980374337211">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Enemy" sid="4546536096185706">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="HP do inimigo" name="HealthPoints" sid="9393384590108784" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Bullet" sid="3777975228146841">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="2721642350837795">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="6699962263277788">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8589316421249844" speed="5">
+                    <frame duration="1" hotspotX="0.514085" hotspotY="0.5" original-source="C:\Users\ronald.junior\Downloads\monster.png">
+                        <collision-poly>
+                            <point x="0.274648" y="0.392157" />
+                            <point x="0.507042" y="0.245098" />
+                            <point x="0.950704" y="0.107843" />
+                            <point x="0.739437" y="0.5" />
+                            <point x="0.950704" y="0.892157" />
+                            <point x="0.507042" y="0.745098" />
+                            <point x="0.253521" y="0.637255" />
+                            <point x="0.0211268" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Bullet" sid="4214728062524217">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="2919923586052796">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="757383979127014">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9172868257764513" speed="5">
+                    <frame duration="1" hotspotX="0.52" hotspotY="0.5" original-source="C:\Users\ronald.junior\Downloads\bullet_4.png">
+                        <collision-poly>
+                            <point x="0.16" y="0.166667" />
+                            <point x="0.48" y="0.166667" />
+                            <point x="0.8" y="0.25" />
+                            <point x="0.92" y="0.5" />
+                            <point x="0.8" y="0.75" />
+                            <point x="0.48" y="0.833333" />
+                            <point x="0.16" y="0.833333" />
+                            <point x="0.08" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Explosion" sid="1990520315162909">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="8845058088289704">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2019702578789066" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504951" original-source="C:\Users\ronald.junior\Downloads\explode.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Player" sid="2349432717880478">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="HealthPoints" sid="3580716251415206" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="BoundToLayout" sid="2335907026210199">
+                    <behavior id="bound" />
+                </behavior-type>
+                <behavior-type name="8Direction" sid="6885589618269436">
+                    <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="5830828867605405">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="6230869846723926">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8737056819226135" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504854" original-source="C:\Users\ronald.junior\Downloads\player_4.png">
+                        <image-point name="Imagepoint 1" x="1" y="0.504854" />
+                        <collision-poly>
+                            <point x="0.240741" y="0.252427" />
+                            <point x="0.5" y="0.0776699" />
+                            <point x="0.685185" y="0.330097" />
+                            <point x="0.944444" y="0.495146" />
+                            <point x="0.703704" y="0.68932" />
+                            <point x="0.5" y="0.961165" />
+                            <point x="0.194444" y="0.796117" />
+                            <point x="0.0462963" y="0.495146" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text" sid="9394649699982898">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Boss" sid="2050955243857628">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="HealthPoints" sid="1615000847185423" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Solid" sid="9642664456571444">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="7134694765331577">
+                    <behavior id="Flash" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="7171381530502775">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4123718793519655" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\ronald.junior\Desktop\WBML_enemy_dragon_form1.png">
+                        <collision-poly>
+                            <point x="0.0964912" y="0.0873016" />
+                            <point x="0.5" y="0.0238095" />
+                            <point x="0.745614" y="0.230159" />
+                            <point x="0.833333" y="0.5" />
+                            <point x="0.95614" y="0.960317" />
+                            <point x="0.5" y="0.928571" />
+                            <point x="0.149123" y="0.865079" />
+                            <point x="0.0964912" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="590018070557603">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9277880580931532" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\ronald.junior\Desktop\images.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="2160742058360777">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4930950736357686" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\ronald.junior\Desktop\S2e16_You_lose.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Gameplay.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>event_sheet_gameplay.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="1" />
+        <global-instance type="Mouse" uid="2" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
